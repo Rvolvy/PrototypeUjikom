@@ -13,25 +13,48 @@
   <div class="flex flex-col justify-center w-[50%] h-[90%] gap-[70px]">
     <p class="text-[#ffffff] text-[35px] font-semibold text-center">PILIH JUMLAH PAKET TUNAI</p>
     <div class="flex flex-row justify-between items-center w-[100%]">
-      <a href="./output.html" class="text-[#ffffff] text-[35px] font-semibold text-center"><- 100.000</p>
-          <a href="./output.html" class="text-[#ffffff] text-[35px] font-semibold text-center">1.000.000 -></a>
+      <button class="text-[#ffffff] text-[35px] font-semibold text-center" onclick="Click(tunai.seratus)"> <- 100.000 </button>
+      <button class="text-[#ffffff] text-[35px] font-semibold text-center" onclick="Click(tunai.satujuta)"> 1.000.000 -> </button>
     </div>
     <div class="flex flex-row justify-between items-center w-[100%]">
-      <a href="./output.html" class="text-[#ffffff] text-[35px] font-semibold text-center"><- 200.000</p>
-          <a href="./output.html" class="text-[#ffffff] text-[35px] font-semibold text-center">1.500.000 -></a>
+      <button class="text-[#ffffff] text-[35px] font-semibold text-center" onclick="Click(tunai.duaratus)"> <- 200.000 </button>
+      <button class="text-[#ffffff] text-[35px] font-semibold text-center" onclick="Click(tunai.satusetengah)"> 1.500.000 -> </button>
     </div>
     <div class="flex flex-row justify-between items-center w-[100%]">
-      <a href="./output.html" class="text-[#ffffff] text-[35px] font-semibold text-center"><- 300.000</p>
-          <a href="./output.html" class="text-[#ffffff] text-[35px] font-semibold text-center">2.000.000 -></a>
+      <button class="text-[#ffffff] text-[35px] font-semibold text-center" onclick="Click(tunai.tigaratus)"> <- 300.000 </button>
+      <button class="text-[#ffffff] text-[35px] font-semibold text-center" onclick="Click(tunai.duajuta)"> 2.000.000 -> </button>
     </div>
     <div class="flex flex-row justify-between items-center w-[100%]">
-      <a href="" class="text-[#ffffff] text-[35px] font-semibold text-center"><- 500.000</p>
-          <a href="./lainnya.html" class="flex flex-col justify-center items-center">
-            <p class="text-[#ffffff] text-[35px] font-semibold text-center">TRANSAKSI</p>
-            <p class="text-[#ffffff] text-[35px] font-semibold text-center">LAINNYA -></p>
-          </a>
+      <button class="text-[#ffffff] text-[35px] font-semibold text-center" onclick="Click(tunai.limaratus)"> <- 500.000 </button>
+      <button class="flex flex-col justify-center items-center">
+        <p class="text-[#ffffff] text-[35px] font-semibold text-center">TRANSAKSI</p>
+        <p class="text-[#ffffff] text-[35px] font-semibold text-center">LAINNYA -></p>
+      </button>
     </div>
   </div>
+
+  <script>
+    let tunai = {
+      seratus:'100000',
+      duaratus:'200000',
+      tigaratus:'300000',
+      limaratus:'500000',
+      satujuta:'1000000',
+      satusetengah:'1500000',
+      duajuta:'2000000'
+    };
+    let uang = 5000000
+  
+    alert(`Uang tunai anda: ${uang}`)
+
+    function Click(value) {
+      const valueUang = confirm(`Sisa saldo anda ${uang - value}`)
+      if(valueUang == true){
+        location.href = "output.html"
+      }
+    }
+  </script>
+
 </body>
 
 </html>

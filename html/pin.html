@@ -17,13 +17,26 @@
     <div class="flex flex-col justify-center items-center gap-[100px] w-[50%]">
       <p class="text-[#ffffff] text-[35px] font-semibold text-center">MASUKKAN PIN</p>
       <div class="flex flex-row justify-center items-center gap-[10px]">
-        <input type="text" class="w-[450px] py-[3px] px-[10px] border-none outline-none text-[25px] font-semibold">
-        <a href="./tunai.html"
-          class="text-[25px] text-[#ffffff] font-semibold bg-[#00ff00] py-[3px] px-[10px] duration-[0.5s] hover:bg-[#008000]">ENTER</a>
+        <input type="text" class="w-[450px] py-[3px] px-[10px] border-none outline-none text-[25px] font-semibold" id="pin">
+        <button onclick="Click()" class="text-[25px] text-[#ffffff] font-semibold bg-[#00ff00] py-[3px] px-[10px] duration-[0.5s] hover:bg-[#008000] cursor-pointer" id="button">ENTER</button>
       </div>
       <p class="text-[#ffffff] text-[35px] font-semibold text-center">TEKAN 'ENTER' JIKA SELESAI MEMASUKKAN PIN</p>
     </div>
   </div>
-</body>
 
+  <script>
+    let pin = document.getElementById('pin')
+    let button = document.getElementById('button')
+  
+    function Click() {
+      if(pin.value == '177013'){
+        location.href = "tunai.html"
+      }
+      else{
+        alert('Password Salah')
+      }
+    }
+  </script>
+
+</body>
 </html>
