@@ -48,7 +48,7 @@
     alert(`Uang tunai anda: ${uang}`)
 
     function Click(value) {
-      const valueUang = confirm(`Sisa saldo anda ${uang - value}`)
+      const valueUang = confirm(`Anda akan mengambil uang tunai sebesar ${value} dengan sisa saldo ${uang - value}`)
       if(valueUang == true){
         location.href = "output.html"
       }
