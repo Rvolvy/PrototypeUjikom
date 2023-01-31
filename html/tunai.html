@@ -45,10 +45,10 @@
     };
     let uang = 5000000
   
-    alert(`Uang tunai anda: ${uang}`)
+    alert(`Uang tunai anda: Rp.${uang}`)
 
     function Click(value) {
-      const valueUang = confirm(`Anda akan mengambil uang tunai sebesar ${value} dengan sisa saldo ${uang - value}`)
+      const valueUang = confirm(`Anda akan mengambil uang tunai sebesar Rp.${value} dengan sisa saldo Rp.${uang - value}`)
       if(valueUang == true){
         location.href = "output.html"
       }
